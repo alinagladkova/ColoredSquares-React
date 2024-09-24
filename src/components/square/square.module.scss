@@ -1,0 +1,27 @@
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  color: aliceblue;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+
+  &--green {
+    background-color: rgb(69, 131, 79);
+  }
+
+  &--blue {
+    background-color: #384069;
+  }
+
+  &--red {
+    background-color: #741e1e;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
