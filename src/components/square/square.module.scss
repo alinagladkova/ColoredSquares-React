@@ -9,16 +9,16 @@
   font-weight: bold;
   cursor: pointer;
 
-  &--green {
-    background-color: rgb(69, 131, 79);
+  &--violet {
+    background-color: #8a2be2;
   }
 
-  &--blue {
-    background-color: #384069;
+  &--purple {
+    background-color: #800080;
   }
 
-  &--red {
-    background-color: #741e1e;
+  &--orchid {
+    background-color: #da70d6;
   }
 
   &:hover {

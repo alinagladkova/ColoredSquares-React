@@ -1,15 +1,23 @@
 .btn {
   cursor: pointer;
-  padding: 10px 15px;
+  padding: 10px 12px;
   border: none;
+  background-color: #4b0082;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 5px;
 
-  &--normal {
-    background-color: #e6e6e6;
-    color: #000;
-  }
+  // &--normal {
+  //   background-color: #4b0082;
+  //   color: #fff;
+  // }
 
-  &--warning {
-    background-color: #df4747;
-    color: #fff;
+  // &--warning {
+  //   background-color: #dc143c;
+  //   color: #fff;
+  // }
+
+  &:hover {
+    background-color: SlateBlue;
   }
 }

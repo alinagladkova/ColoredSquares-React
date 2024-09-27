@@ -6,6 +6,7 @@ import Button from "../button/Button";
 
 export default function SquaresList({ data }) {
   const [total, setTotal] = useState(0);
+  const [newData, setNewData] = useState(data);
 
   const setTotalHandler = (num) => {
     setTotal(total + num);
@@ -15,17 +16,25 @@ export default function SquaresList({ data }) {
     setTotal(0);
   };
 
+  const setShuffleHandler = () => {
+    setNewData([...newData].sort(() => Math.random() - 0.5)); //!! еще раз объяснить про spread
+  };
+
+  const setSortAscHandler = () => {
+    setNewData([...newData].sort((a, b) => a.num - b.num));
+  };
+
   return (
     <div className={cn(styles["squares-list"])}>
-      <span className={cn(styles["squares-list__total"])}>total: {total}</span>
+      <span className={cn(styles["squares-list__total"])}>Total: {total}</span>
       <div className={cn(styles["squares-list__control"])}>
-        <Button text="reset" use="warning" handler={setResetHandler}></Button>
-        <Button text="mix" use="normal" handler={() => {}}></Button>
-        <Button text="sort by asc" use="normal" handler={() => {}}></Button>
-        <Button text="sort by desc" use="normal" handler={() => {}}></Button>
+        <Button text="Reset" use="reset" handler={setResetHandler}></Button>
+        <Button text="Shuffle" use="shuffle" handler={setShuffleHandler}></Button>
+        <Button text="Sort by asc" use="sortAsc" handler={setSortAscHandler}></Button>
+        {/* <Button text="Sort by desc" use="sortDesc" handler={() => {}}></Button> */}
       </div>
       <div className={cn(styles["squares-list__wrapper"])}>
-        {data.map((square) => (
+        {newData.map((square) => (
           <Square key={square.id} num={square.num} color={square.color} setTotalHandler={setTotalHandler}></Square>
         ))}
       </div>
@@ -38,8 +47,8 @@ export default function SquaresList({ data }) {
 ДЗ:
 
 оживить:
-кнопка сброс total ++
-кнопка перемешать квадратики (загуглить javascript array shake )
+кнопка сброс total +
+кнопка перемешать квадратики (загуглить javascript array shake )  shuffle(arr); ++
 кнопка сортировка больше меньше
 
 нужно чуток доверстать квадратик (добавить еще число) число будет считать кол-во кликов на конкретный квадратик

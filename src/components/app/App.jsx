@@ -4,47 +4,47 @@ const data = [
   {
     id: 352432,
     num: 10,
-    color: "red",
+    color: "violet",
   },
   {
     id: 546,
     num: 10342,
-    color: "green",
+    color: "purple",
   },
   {
     id: 56,
     num: 56,
-    color: "blue",
+    color: "orchid",
   },
   {
     id: 13,
     num: 67,
-    color: "red",
+    color: "violet",
   },
   {
     id: 567,
     num: 7,
-    color: "green",
+    color: "purple",
   },
   {
     id: 23,
     num: 325,
-    color: "green",
+    color: "purple",
   },
   {
     id: 768,
     num: 46,
-    color: "red",
+    color: "violet",
   },
   {
     id: 46,
     num: 107,
-    color: "blue",
+    color: "orchid",
   },
   {
     id: 89,
     num: 435,
-    color: "red",
+    color: "violet",
   },
 ];
 
