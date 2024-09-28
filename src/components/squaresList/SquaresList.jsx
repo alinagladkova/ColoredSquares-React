@@ -3,6 +3,7 @@ import Square from "../square/Square";
 import styles from "./squaresList.module.scss";
 import cn from "classnames";
 import Button from "../button/Button";
+import SquaresGroup from "../squaresGroups/SquaresGroups";
 
 export default function SquaresList({ data }) {
   const [total, setTotal] = useState(0);
@@ -44,9 +45,11 @@ export default function SquaresList({ data }) {
       </div>
       <div className={cn(styles["squares-list__wrapper"])}>
         {newData.map((square) => (
+          //
           <Square key={square.id} num={square.num} color={square.color} setTotalHandler={setTotalHandler} setClickNumHandler={setClickNumHandler}></Square>
         ))}
       </div>
+      <SquaresGroup data={data}></SquaresGroup>
     </div>
   );
 }
