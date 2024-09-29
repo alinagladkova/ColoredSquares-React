@@ -45,7 +45,6 @@ export default function SquaresList({ data }) {
       </div>
       <div className={cn(styles["squares-list__wrapper"])}>
         {newData.map((square) => (
-          //
           <Square key={square.id} num={square.num} color={square.color} setTotalHandler={setTotalHandler} setClickNumHandler={setClickNumHandler}></Square>
         ))}
       </div>
