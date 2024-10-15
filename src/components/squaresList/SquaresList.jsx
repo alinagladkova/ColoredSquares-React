@@ -8,7 +8,6 @@ import SquaresGroup from "../squaresGroups/SquaresGroups";
 export default function SquaresList({ data }) {
   const [total, setTotal] = useState(0);
   const [newData, setNewData] = useState(data);
-  const [clickNum, setClickNum] = useState(0);
 
   const setTotalHandler = (num) => {
     setTotal(total + num);
@@ -18,12 +17,8 @@ export default function SquaresList({ data }) {
     setTotal(0);
   };
 
-  const setClickNumHandler = (clickNum) => {
-    clickNum = 0;
-  };
-
   const setShuffleHandler = () => {
-    setNewData([...newData].sort(() => Math.random() - 0.5)); //!! еще раз объяснить про spread
+    setNewData([...newData].sort(() => Math.random() - 0.5));
   };
 
   const setSortAscHandler = () => {
@@ -45,7 +40,7 @@ export default function SquaresList({ data }) {
       </div>
       <div className={cn(styles["squares-list__wrapper"])}>
         {newData.map((square) => (
-          <Square key={square.id} num={square.num} color={square.color} setTotalHandler={setTotalHandler} setClickNumHandler={setClickNumHandler}></Square>
+          <Square key={square.id} num={square.num} color={square.color} handler={setTotalHandler}></Square>
         ))}
       </div>
       <SquaresGroup data={data}></SquaresGroup>
@@ -59,11 +54,11 @@ export default function SquaresList({ data }) {
 
 оживить:
 кнопка сброс total +
-кнопка перемешать квадратики (загуглить javascript array shake )  shuffle(arr); ++
-кнопка сортировка больше меньше ++
+кнопка перемешать квадратики (загуглить javascript array shake )  shuffle(arr); +
+кнопка сортировка больше меньше +
 
 нужно чуток доверстать квадратик (добавить еще число) число будет считать кол-во кликов на конкретный квадратик
-сделать отдельный компонент: SquaresGroups -> reds: 3, greens: 2, blue: 5
+сделать отдельный компонент: SquaresGroups -> reds: 3, greens: 2, blue: 5 +
 
 
 */

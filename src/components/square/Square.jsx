@@ -2,17 +2,12 @@ import { useState } from "react";
 import styles from "./square.module.scss";
 import cn from "classnames";
 
-export default function Square({ num, color, setTotalHandler, setClickNumHandler }) {
+export default function Square({ num, color, handler }) {
   const [clickNum, setClickNum] = useState(0);
 
-  const setStateClickNum = () => {
-    setClickNum(clickNum + 1);
-  };
-
   const clickAction = () => {
-    setTotalHandler(num);
-    setStateClickNum();
-    setClickNumHandler(clickNum);
+    handler(num);
+    setClickNum(clickNum + 1);
   };
 
   return (
