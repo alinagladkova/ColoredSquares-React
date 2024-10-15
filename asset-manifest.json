@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ColoredSquares-React/static/css/main.22e7dd65.css",
+    "main.js": "/ColoredSquares-React/static/js/main.eb653b69.js",
+    "index.html": "/ColoredSquares-React/index.html",
+    "main.22e7dd65.css.map": "/ColoredSquares-React/static/css/main.22e7dd65.css.map",
+    "main.eb653b69.js.map": "/ColoredSquares-React/static/js/main.eb653b69.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.22e7dd65.css",
+    "static/js/main.eb653b69.js"
+  ]
+}
